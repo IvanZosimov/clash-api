@@ -148,28 +148,9 @@
           </dependency>
         </dependencies>
       </plugin>
-    </plugins>
-  </build>
-
-  <!-- Properties -->
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-    <kotlin.version>1.6.10</kotlin.version>
-    <serialization.version>1.3.1</serialization.version>
-    <java.version>1.8</java.version>
-  </properties>
-
-  <!-- Profiles -->
-  <profiles>
-    <profile>
-      <id>sign</id>
-      <build>
-        <plugins>
-          <!-- GPG Signing plugin -->
-          <plugin>
+        
+        <!-- GPG Signing plugin -->
+        <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
             <version>1.5</version>
@@ -190,8 +171,18 @@
               </gpgArguments>
             </configuration>
           </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
+    </plugins>
+  </build>
+
+  <!-- Properties -->
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <kotlin.version>1.6.10</kotlin.version>
+    <serialization.version>1.3.1</serialization.version>
+    <java.version>1.8</java.version>
+  </properties>
+  
 </project>
